@@ -1,0 +1,173 @@
+.contents {
+  height: 1000px;
+}
+
+.container {
+  position: relative;
+  padding: 0 0 40px;
+  width: 100%;
+  transition: opacity 0.3s ease-out;
+}
+
+.swiper-slide {
+  width: 990px;
+  height: auto;
+}
+
+.swiper-slide img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.popup__button {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  display: block;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: background 0.5s;
+}
+.popup__button::after {
+  display: inline-block;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  content: "";
+  width: 24px;
+  height: 50px;
+  background: url(http://coff-ichinomiya.jp/img/common/icon_popup_enlarge.svg) no-repeat center center/contain;
+}
+.popup__button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: background 0.5s;
+}
+
+.slide__text {
+  position: absolute;
+  bottom: 30px;
+  left: -30px;
+  padding: 20px;
+  color: #fff;
+  font-size: 1vw;
+  background-color: #333;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+@media only screen and (max-width: 750px) {
+  .container {
+    padding: 0 0 30px;
+  }
+
+  .swiper-slide {
+    text-align: center;
+  }
+
+  .swiper-slide img {
+    width: calc(100% - 30px);
+    max-width: calc(100% - 30px);
+    height: auto;
+  }
+
+  .slide__text {
+    left: 0;
+    bottom: calc(30/750*100vw);
+    padding: 10px;
+    font-size: 2.5vw;
+  }
+
+  .popup__button {
+    right: 15px;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.mfp-wrap {
+  -webkit-animation: fadeIn 0.9s ease-out 0s 1 normal;
+          animation: fadeIn 0.9s ease-out 0s 1 normal;
+}
+
+.swiper-slide-active .slide__text {
+  opacity: 1;
+  transition: opacity 1.5s 0.5s;
+}
+
+.swiper-pagination-custom {
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  margin-top: 0;
+  top: auto;
+  bottom: 4px;
+  width: 18px;
+  height: 9px;
+  background-size: 7px 12px;
+}
+
+.swiper-button-prev {
+  left: 44vw;
+  background: url(http://coff-ichinomiya.jp/img/common/icon_swiper_prev.svg) no-repeat center center/contain;
+}
+
+.swiper-button-next {
+  right: 44vw;
+  background: url(http://coff-ichinomiya.jp/img/common/icon_swiper_next.svg) no-repeat center center/contain;
+}
+
+.swiper-pagination-fraction {
+  bottom: 0;
+}
+
+@media only screen and (max-width: 750px) {
+  .swiper-pagination {
+    font-size: 1rem;
+  }
+
+  .swiper-button-prev {
+    left: 22vw;
+  }
+
+  .swiper-button-next {
+    right: 22vw;
+  }
+}

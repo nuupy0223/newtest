@@ -29,37 +29,38 @@
                 <li><a href=""><span>고객센터</span></a></li>
             </ul>
         </div>
-        <!-- Slider main container -->
-        <div class="slider swiper">
-            <!-- Additional required wrapper -->
-            <div class="slider_inner swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide" data-swiper-slide-index="0">
-                    <div class="title">
-                        <h3></h3>
-                        <span></span>
+        
+        <div class="slider">
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="slider_inner swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide" data-swiper-slide-index="0">
+                        <div class="title">
+                            <h3></h3>
+                            <span></span>
+                        </div>
+                        <img src="images/main_slide.jpg">
                     </div>
-                    <img src="images/main_slide.jpg">
-                </div>
-                <div class="swiper-slide" data-swiper-slide-index="1">
-                    <div class="title">
-                        <h3></h3>
-                        <span></span>
+                    <div class="swiper-slide" data-swiper-slide-index="1">
+                        <div class="title">
+                            <h3></h3>
+                            <span></span>
+                        </div>
+                        <img src="images/main_slide.jpg">
                     </div>
-                    <img src="images/main_slide.jpg">
                 </div>
-            </div>
-            <div class="swiper-pagination">
-                <span class="swiper-pagination-current"></span>
-            </div>
-            <!-- If we need navigation buttons -->
-            <div class="btn-wrapper">
-                <div class="swiper-pagination">
-                <span class="swiper-pagination-current"></span>
-                <span class="swiper-pagination-total"></span>
-            </div>
-            <div class="prev btn"></div>
-            <div class="before btn"></div>
+                <!-- If we need navigation buttons -->
+                <div class="btn-wrapper">
+                    <div class="prev btn"></div>
+                    
+                    <div class="swiper-pagination">
+                    <span class="swiper-pagination-current"></span>
+                    <span class="swiper-pagination-total"></span>
+                </div>
+                    <div class="before btn"></div>
+                </div>
             </div>
         </div>
         
@@ -221,10 +222,11 @@
         // Optional parameters
         loop: true,
         slidesPerView : '1',
+
         
         //자동 슬라이드
         autoplay: {
-        delay: 2500,
+        delay: 1000,
         },
         
         // Navigation arrows
@@ -235,8 +237,13 @@
 
         // 페이지 네이션
         pagination: {
-        el: '.swiper-pagination, .swiper-pagination2',
+        el: '.swiper-pagination',
         type: 'fraction',
+		clickable: true,
+		renderFraction: function (currentClass, totalClass) {
+        return '<span class="' + currentClass + '"></span>'+
+             '<span class="' + totalClass + '"></span>';
+            }      
   },
 
   
