@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>rolling</title>
+<link rel="stylesheet" type="text/css" href="slick.css">
+<link rel="stylesheet" type="text/css" href="slick-theme.css">
+<style type="text/css"> 
+
+*{margin: 0; padding: 0;}
+    .wrap{width: 1920px; margin: auto;}
+    .box section{position: absolute; position: absolute; top:150px; left:100px; z-index: 1;}
+    .box .mobile{position:absolute; top:50px; right:395px;}
+    .slider { width: 90%; margin: 100px auto;}
+    .slick-slide { margin: 0px 20px; }
+    .slick-slide img {  width: 100%; }
+</style>
+</head>
+
+<body>
+<div class="wrap">
+            <div class="box">
+    
+                <section class="regular slider">
+                    <div>
+                      <img src="img/09_news.png">
+                    </div>
+                    <div>
+                      <img src="img/09_news.png">
+                    </div>
+                    <div>
+                      <img src="img/09_news.png">
+                    </div>
+                    <div>
+                      <img src="img/09_news.png">
+                    </div>
+                    <div>
+                      <img src="img/09_news.png">
+                    </div>
+                    <div>
+                      <img src="img/09_news.png">
+                    </div>
+                    <div>
+                      <img src="img/09_news.png">
+                    </div>
+                    <div>
+                      <img src="img/09_news.png">
+                    </div>
+                    <div>
+                      <img src="img/09_news.png">
+                    </div>
+                  </section>
+
+
+                <div class="mobile"><img src="img/18_news.png"></div>
+             </div>
+
+             
+            
+            
+              <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+              <script src="slick.js" type="text/javascript" charset="utf-8"></script>
+              <script type="text/javascript">
+                $(document).on('ready', function() {
+                  
+                  $(".regular").slick({
+                    infinite: true,
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 500,
+                    arrows:false
+                  });
+                });
+            </script>
+
+
+
+    
+</body>
+
+</html>

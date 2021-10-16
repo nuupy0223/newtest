@@ -1,0 +1,143 @@
+*{padding: 0; margin: 0;}
+ul, li{list-style: none;}
+h1, h2, h3, p, strong, span, button{text-indent: -9999px; }
+a, strong, span{display: block;}
+#wrap{width: 100%;}
+
+h1 {background: url(../images/logo.png) no-repeat; width: 99px; height: 100%; }
+.title{margin-bottom: 36px;}
+h3 {float: left; }
+h3+span{float: left; margin-left: 22px;}
+
+.nav, .ibnr ul, .story, .product, .now_inner, .kanulife, .footer_inner{width: 1300px; margin:0 auto;}
+.story, .now_inner, .kanulife{padding: 100px 0 100px;}
+
+
+.nav{height: 84px;}
+.nav h1{float: left; background-position: 0 center; height: 100%;}
+.nav h1 a{line-height: 84px; height: 84px;}
+.nav ul{float:right;}
+.nav ul li{float: left;}
+.nav ul li~li{margin-left: 74px;}
+.nav ul li a{height: 100%; line-height: 84px; }
+/* 밑줄 이벤트 */
+.nav ul li::after{
+    display:block;
+    content: '';
+    border-bottom: solid 3px #ea2129;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+    margin-top: -3px;
+  }
+.nav ul li:hover::after { transform: scaleX(1);}
+/* 밑줄 이벤트 끝 */
+
+.nav li a span{background-image: url(../images/sprite.png) no-repeat; height: 18px; }
+.nav li:first-child{background: url(../images/nav_brand.png) 0 center no-repeat; width: 84px;}
+.nav li:nth-child(2){background: url(../images/nav_event.png) 0 center no-repeat; width: 49px;}
+.nav li:nth-child(3){background: url(../images/nav_product.png) 0 center no-repeat; width: 63px;}
+.nav li:nth-child(4){background: url(../images/nav_story.png) 0 center no-repeat; width: 83px;}
+.nav li:nth-child(5){background: url(../images/nav_consumer.png) 0 center no-repeat; width: 63px;}
+
+
+.nav li:first-child:hover{background: url(../images/nav_brand_on.png) 0 center no-repeat; width: 84px;}
+.nav li:nth-child(2):hover{background: url(../images/nav_event_on.png) 0 center no-repeat; width: 49px;}
+.nav li:nth-child(3):hover{background: url(../images/nav_product_on.png) 0 center no-repeat; width: 63px;}
+.nav li:nth-child(4):hover{background: url(../images/nav_story_on.png) 0 center no-repeat; width: 83px;}
+.nav li:nth-child(5):hover{background: url(../images/nav_consumer_on.png) 1 center no-repeat; width: 63px;}
+
+
+.slider{position: relative; background: #fbfbfb; margin: 0 auto; width: 100%;}
+.slider img{width: 100%;}
+.slider .title{position: absolute;}
+
+.ibnr{background: #f8f5ee;}
+.ibnr ul{padding: 50px 0;  overflow: hidden;}
+.ibnr strong{width: 0; height: 0;}
+.ibnr a{height: 100%; width: 100%;}
+.ibnr li{ float: left; padding-left: 70px;}
+
+.story h3{background: url(../images/story_title.png) no-repeat; width: 241px; height: 49px; }
+.story .subt{background: url(../images/story_subt.png) 0 bottom no-repeat; width: 483px; height: 49px; }
+.story .title a{background: url(../images/story_more.png) 0 bottom no-repeat; width: 166px; height: 49px; float: right;}
+.story .title::after{content:""; display: block; clear: both;}
+
+.story .banner{float: left; padding-right: 90px;}
+
+
+.product .title{height: 49px;}
+.product .title h3{background: url(../images/prodocut_title.png) no-repeat; width: 195px;height: 49px;}
+.product .subt{background: url(../images/product_subt.png) 0 bottom no-repeat; width: 410px; height: 49px; }
+.product .tabs{margin-bottom: 36px;}
+.product .tabs li{float: left; padding-right: 24px;}
+.product .tabs::after{content:""; display: block; clear: both;}
+
+.product .tabs a{background: url(../images/sprite.png) no-repeat; height: 40px; line-height: 40px;}
+.product .tabs li:first-of-type a{width: 74px; background-position:  0 -52px;}
+.product .tabs li:nth-of-type(2) a{width: 82px; background-position: -93px 0;}
+.product .tabs li:nth-of-type(3) a{width: 105px; background-position: -193px 0;}
+.product .tabs li:nth-of-type(4) a{width: 68px; background-position: -317px 0;}
+.product .tabs li:nth-of-type(5) a{width: 82px; background-position: -403px 0;}
+.product .tabs li:nth-of-type(6) a{width: 54px; background-position: -503px 0;}
+.product .tabs li:nth-of-type(7) a{width: 105px; background-position: -576px 0;}
+
+/*hover*/
+.product .tabs li:nth-of-type(2) a:hover{width: 82px; background-position: -93px -52px;}
+.product .tabs li:nth-of-type(3) a:hover{width: 105px; background-position: -193px -52px;}
+.product .tabs li:nth-of-type(4) a:hover{width: 68px; background-position: -317px -52px;}
+.product .tabs li:nth-of-type(5) a:hover{width: 82px; background-position: -403px -52px;}
+.product .tabs li:nth-of-type(6) a:hover{width: 54px; background-position: -503px -52px;}
+.product .tabs li:nth-of-type(7) a:hover{width: 105px; background-position: -576px -52px;}
+
+.product_slide {display: flex; overflow: visible; margin-bottom: 50px;}
+.product_slide li{float: left; padding-right: 40px;}
+.product_slide::after{content:""; display: block; clear: both;}
+
+
+.now {background: #f8f5ee;}
+.now h3{background: url(../images/now_title.png) center 0 no-repeat; width: 100%; height: 49px;}
+.now .sns_tile{padding-top: 90px; border-radius: 10px 0 0 10px;}
+.now .sns_tile::after{content:""; display: block; clear: both;}
+.now .sns_tile img{width: 100%; }
+.now .sns_tile li{float: left; width: 310px; height: 310px;margin-top: 19px; position: relative; }
+.now .sns_tile li+li{padding-left: 19px; }
+.now .sns_tile .sns_subtext{background: url(../images/sns_subtext.png) 0 45px no-repeat; padding-left: 0; }
+
+.now .sns_more{background: url(../images/sns_more.png) no-repeat; width: 273px; height: 66px; margin: auto; margin-top: 60px;}
+
+.now .sns_tile li a::before{content: ""; display: block; opacity: 0; transition: .5s;  z-index: -1; width: 310px; height: 310px; position: absolute;}/*호버 전 투명도*/
+.now .sns_tile li a:hover::before{opacity: 0.8; z-index: 1;}/*호버 후 투명도*/
+.now .sns_tile .ins a::before{background: rgb(90, 84, 84, 0.25) url(../images/sns_instagram.png) 20px 240px no-repeat;}/*인스타그램 아이콘*/
+.now .sns_tile .fb a::before{background: rgb(90, 84, 84, 0.25) url(../images/sns_facebook.png) 20px 240px no-repeat;}/*페이스북 아이콘*/
+/*아래로 내려오는 빨간 배경 깔기
+.now .sns_tile li a::before{content: ""; display: block; opacity: 0; transition: .5s; position: absolute; top: 0; bottom: 0; transform-origin: 100% 0%; transform: scaleY(0); z-index: -1; width: 310px;}
+.now .sns_tile li a:hover:before{opacity: 0.5; z-index: 1; transform: scaleY(1);}
+*/
+
+
+
+.kanulife h3{background: url(../images/life_title.png) no-repeat; width: 100%; height: 66px; margin-bottom: 35px;}
+
+.footer{background: #f8f5ee; overflow: hidden; }
+.footer_inner{padding: 70px 0;}
+.footer_inner::after{content:""; display: block; clear: both;}
+
+.footer_inner>div{height: 100%; float: left;}
+.footer .info li{float: left; height: 22px; padding-right: 56px;}
+.footer .info li:first-child a{background: url(../images/footer_kanu_intro.png) no-repeat; width: 82px;}
+.footer .info li:last-child a{background: url(../images/footer_consumer.png) no-repeat; width: 77px;}
+
+.footer_inner div:first-of-type{width: 285px;}
+.footer_inner div:nth-of-type(3){float: right;}
+
+.footer .snslink{margin-top: -10px;}
+.footer .snslink a{float: left; width: 46px; height: 46px; margin-left: 9px;}
+.footer .snslink a:first-of-type{background: url(../images/sns_instagram.png) no-repeat;}
+.footer .snslink a:nth-of-type(2){background: url(../images/sns_facebook.png) no-repeat;}
+.footer .snslink a:nth-of-type(3){background: url(../images/sns_youtube.png) no-repeat;}
+
+.footer .info ul{overflow: hidden;}
+.footer .info p:first-of-type{background: url(../images/footer_text01.png) no-repeat; width: 505px; height: 20px; margin-top: 38px;}
+.footer .info p:nth-of-type(2){background: url(../images/footer_text02.png) no-repeat; width: 572px; height: 20px; margin-top: 14px;}
+
+.footer>p{background: #dc2733 url(../images/copylight.png) center center no-repeat; width: 100%; height: 50px;;}
