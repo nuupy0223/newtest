@@ -32,7 +32,7 @@
         
         <div class="slider">
             <!-- Slider main container -->
-            <div class="swiper">
+            <div class="swiper swiper-container">
                 <!-- Additional required wrapper -->
                 <div class="slider_inner swiper-wrapper">
                     <!-- Slides -->
@@ -48,7 +48,7 @@
                             <h3></h3>
                             <span></span>
                         </div>
-                        <img src="images/main_slide.jpg">
+                        <img src="images/main_slide2.jpg">
                     </div>
                 </div>
                 <!-- If we need navigation buttons -->
@@ -60,7 +60,10 @@
                     <span class="swiper-pagination-total"></span>
                 </div>
                     <div class="before btn"></div>
+                    <button class="btn-pause pause"><span class="i-pause">pause</span>
+                        <span class="i-play">play</span></button>
                 </div>
+
             </div>
         </div>
         
@@ -92,6 +95,7 @@
                 </li>
             </ul>
         </div>
+        
         <div class="story">
             <div class="title">
                 <h3>카누 이야기</h3>
@@ -103,7 +107,17 @@
                     <div class="banner story_slider">
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="images/story_bnr01.png"></div>
+                                <div class="swiper-slide" data-swiper-slide-index="0"><img src="images/story_bnr01.png"></div>
+                                <div class="swiper-slide" data-swiper-slide-index="1"><img src="images/story_bnr01.png"></div>
+                            </div>
+                            <!-- If we need navigation buttons -->
+                            <div class="btn-wrapper">
+                                <div class="prev btn"></div>
+                                <div class="swiper-pagination">
+                                    <span class="swiper-pagination-current"></span>
+                                    <span class="swiper-pagination-total"></span>
+                                </div>
+                                <div class="before btn"></div>
                             </div>
                         </div>
                     </div>
@@ -113,12 +127,15 @@
                                 <div class="swiper-slide">
                                     <img src="images/story_bnr_t01.png">
                                 </div>
+                                <div class="swiper-slide">
+                                    <img src="images/story_bnr_t01.png">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+            </div>
 
         <div class="product">
             <div class="title">
@@ -226,7 +243,11 @@
         
         //자동 슬라이드
         autoplay: {
-        delay: 1000,
+        delay: 2500,
+        //움직인 후에도 계속 움직이게
+        disableOnInteraction: false,
+        //역방향 슬라이드
+        reverseDirection: true,
         },
         
         // Navigation arrows
@@ -243,31 +264,67 @@
 		renderFraction: function (currentClass, totalClass) {
         return '<span class="' + currentClass + '"></span>'+
              '<span class="' + totalClass + '"></span>';
-            }      
-  },
-
-  
+            }    
+         },
     });
+
+    $(name + ' .btn-pause').on('click', function () {
+		var $this = $(this);
+		if (!$this.hasClass('pause')) {
+			swiper.autoplay.start();
+			$this.addClass('pause');
+		} else {
+			swiper.autoplay.stop();
+			$this.removeClass('pause');
+		}
+	});
 </script>
 
 <script>
     //2번째 슬라이더
     var MainSwiper = new Swiper('.story_slider .swiper-container', {
+        
         // Optional parameters
         loop: true,
-        slidesPerView : '1',
+        slidesPerView: '1',
+        
+        //자동 슬라이드
+        /*autoplay: {
+            waitForTransition: true,
+            delay: 2500,
+            //움직인 후에도 계속 움직이게
+            disableOnInteraction: false,
+            //역방향 슬라이드
+            reverseDirection: true,
+        },*/
 
-  
+        // Navigation arrows
+        navigation: {
+            nextEl: '.prev',
+            prevEl: '.before',
+        },
+
+        // 페이지 네이션
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+            clickable: true,
+            renderFraction: function (currentClass, totalClass) {
+                return '<span class="' + currentClass + '"></span>' +
+                    '<span class="' + totalClass + '"></span>';
+            }
+        },
     });
+
 </script>
 
 <script>
     //3번째 슬러아더
     var SubSwiper = new Swiper('.story_slider_sub .swiper-container', {
+        
         // Optional parameters
         loop: true,
         slidesPerView: '1',
-
     });
 
     MainSwiper.controller.control = SubSwiper;
