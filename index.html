@@ -270,7 +270,7 @@
 
     $(name + ' .btn-pause').on('click', function () {
 		var $this = $(this);
-		if (!$this.hasClass('pause')) {
+		if (!$this.hasClass('pause')) {//2번 슬라이드에도 기능하게 만들려면 name 수정하고, swiper 부분을 MainSwiper로 수정해야 함.
 			swiper.autoplay.start();
 			$this.addClass('pause');
 		} else {
