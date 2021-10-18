@@ -13,7 +13,7 @@ h3+span{float: left; margin-left: 22px;}
 .nav, .ibnr ul, .story, .product, .now_inner, .kanulife, .footer_inner, .btn-wrapper{width: 1300px; margin:0 auto;}
 .story, .now_inner, .kanulife{padding: 100px 0 100px;}
 
-
+/*네비게이션*/
 .nav{height: 84px;}
 .nav h1{float: left; background-position: 0 center; height: 100%;}
 .nav h1 a{line-height: 84px; height: 84px;}
@@ -21,6 +21,7 @@ h3+span{float: left; margin-left: 22px;}
 .nav ul li{display: inline-block;}
 .nav ul li~li{margin-left: 74px;}
 .nav ul li a{height: 100%; line-height: 84px; }
+
 /* 밑줄 이벤트 */
 .nav ul li::after{
     display:block;
